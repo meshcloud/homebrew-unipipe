@@ -8,5 +8,4 @@ class Unipipe < Formula
     def install
       bin.install "unipipe-cli-x86_64-apple-darwin" => "unipipe"
     end
-
-  end
+end
