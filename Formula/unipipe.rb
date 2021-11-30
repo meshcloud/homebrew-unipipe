@@ -7,9 +7,13 @@ class Unipipe < Formula
 
     def install
       bin.install "unipipe-cli-x86_64-apple-darwin" => "unipipe"
+      system bin/"unipipe", "completions", "bash", ">", "_unipipe.bashcomp"
+      zsh_completion.install "_unipipe.bashcomp"
+      system bin/"unipipe", "completions", "zsh", ">", "_unipipe.zshcomp"
+      zsh_completion.install "_unipipe.zshcomp"
     end
     
-  test do
+    test do
     system "#{bin}/unipipe", "--help"
-  end
+    end
 end
