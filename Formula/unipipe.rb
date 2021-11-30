@@ -10,6 +10,6 @@ class Unipipe < Formula
     end
     
     test do
-    system "#{bin}/unipipe", "--help"
+        system "#{bin}/unipipe", "--help"
     end
 end
